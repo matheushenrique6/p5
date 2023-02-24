@@ -1,20 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calcular salario </title>
+    <link rel="stylesheet" href="style.css">
+    <title>salary Tax</title>
+    <link rel="shortcut icon" href="imagens/logo1.ico" type="image/x-icon">
 </head>
-<body>
-    <h1>calculadora de salario </h1>
-    <p>aqui voce coloca o seu salario bruto e caculamos os impostos para voce rapido e facil</p>
+<body>  <img src="imagens/logotipo.png" id="logotipo">
+    <img src="imagens/tenxtura.png" alt="" id="textura">
+    <img src="imagens/ilutraçao1.png" alt="" id="il1">
+    
+   <main>
+    <h1>calculer seus impostos com salary Tax. </h1>
+    <h2>saiba exatamente quanto do <br> seu salario e destinado a  impostos </h2>
     <form action="">
-        <input type="number" name="salario" id="sal1">
-        <input type="button" value="calcular"onclick="calcular()">
+        <input type="number" name="salario" id="sal1" required placeholder="R$1300">
+        <input type="button" value="calcular"onclick="calcular()" id="butao">
     </form>
-    <div id="res">
-
+        <div id="res">
+            <table>
+                <p>salario</p>
+                <tr>
+                    <th><br></th>
+                    <th>%</th>
+                    <th>desconto</th>
+                </tr>
+                <tr>
+                    <th>inss</th>
+                    <td id="poindinss">10</td>
+                    <td id="desinss">100</td>
+                </tr>
+                <tr>
+                    <th>fgts</th>
+                    <td id="poindfgts">10</td>
+                    <td id="desfgts">100</td>
+                </tr>
+                <tr>
+                    <th>irrf</th>
+                    <td id="poindirrf">10</td>
+                    <td id="desirrf">100</td>
+                </tr>
+            </table>
+            <table id="totaltab"></tableid>
+                <tr>
+                 <th class="total">total descontado </th>
+                 <th class="total"> total de desconto</th>
+                </tr>
+                <tr>
+                    <td id="totaldescintado">1000</td>
+                    <td id="totaldesconto">-500</td>
+                </tr>
+                </table>
+            
+        </div>
+        <img src="imagens/pessoa1.png" alt="" id="p1">
+    <p id="comentario">"salary tax me ajuda a saber exatamente quanto e quais impostos eu pagou "</p>
+    <p id="nome">marcos</p>
+</div>
+</main>
     </div>
     <script src="script.js"></script>
 </body>

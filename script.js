@@ -1,11 +1,27 @@
 let salario 
-let res 
+let res
+let respoindinss
+let respoindfgts
+let respoindirrf
+let resdesinss 
+let resdesfgts 
+let resdesirrf
+let restotaldesconto 
+let restotaldescintado 
 let poinss
 let fgts = 8 ;
 let poirrf
 
 function calcular(){
-    res = document.getElementById('res');
+    res = document.getElementById('res')
+    respoindinss = document.getElementById('poindinss');
+    respoindfgts = document.getElementById('poindfgts');
+    respoindirrf = document.getElementById('poindirrf');
+    resdesinss = document.getElementById("desinss");
+    resdesfgts = document.getElementById("desfgts");
+    resdesirrf = document.getElementById("desirrf");
+    restotaldescintado =document.getElementById('totaldescintado')
+    restotaldesconto =document.getElementById('totaldesconto')
     salario= document.getElementById('sal1').value;
     if(salario >= 3641 & salario <= 7087 ){
         poinss =14;
@@ -33,6 +49,13 @@ function calcular(){
   let desfgts = salario *(fgts/100);
   let desirrf = salario *(poirrf/100)
   let destotal= desfgts+desinss + desirrf;
-res.innerHTML = `seu salario e R$ ${salario} a porcentagem paga ao inss e ${poinss}% que coresponde a R$ ${desinss} 
-a porcentagem paga ao inss e ${poirrf}% que coresponde a  R$ ${desirrf} a porcetagem paga ao fgts e 8% que correspode a R$${desfgts} o total de imposto pago e R$${destotal} o seu salario depois dos descontos e R$${salario-destotal}`;
+    respoindinss.innerText = `${poinss}%`;
+    respoindfgts.innerText = `${fgts}%`;
+    respoindirrf.innerText = `${poirrf}%`;
+    resdesinss.innerText= `-${desinss}`;
+    resdesfgts.innerText= `-${desfgts}`;
+    resdesirrf.innerText= `-${desirrf}`;
+    restotaldesconto.innerText =`-${destotal}`;
+    restotaldescintado.innerText =`${salario-destotal}`;
+    res.style.display='block';
 }
